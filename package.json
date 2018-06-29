@@ -1,0 +1,17 @@
+{
+  "name": "deploy-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-proc": "forever start -c 'npm start' ./",
+    "kill": "forever stopall && kill $(lsof -t -i:8080)"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0",
+    "shelljs": "^0.8.2"
+  }
+}
